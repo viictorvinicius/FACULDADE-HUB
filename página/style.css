@@ -1,0 +1,427 @@
+/* Estilos gerais */
+body {
+    padding-top: 60px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+header {
+    background-color: #fdfdfd;
+    display: flex; /* Torna os elementos filhos flexíveis */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1rem;
+    color: #ffffff;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+
+}
+
+.logo-container{
+    flex: 1;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #000000;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+#menu-toggle {
+    display: none;
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.hero p {
+    margin-bottom: 50px;
+}
+
+.cta-button {
+    background: #ff9900;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.cta-button:hover {
+    background: #e68a00;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.sobre, .beneficios, .depoimentos, .inscricao {
+    background: #000000;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px solid #ffffff; /* Borda colorida */
+}
+
+.sobre .content, .depoimentos .depoimento {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.sobre .content img, .depoimentos .depoimento img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.super-bonus {
+    background: #000000;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px solid #ffffff; /* Borda colorida */
+}
+
+.super-bonus-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.super-bonus-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.super-bonus-content p {
+    flex: 1;
+    color: #ffffff;
+}
+
+
+/* Adicione estilos para a seção de depoimentos */
+
+.depoimentos {
+    background: #000000;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px solid #ffffff; /* Borda colorida */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.depoimentos h2 {
+    margin-bottom: 1rem; /* Espaçamento inferior para o título */
+}
+
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.depoimento {
+    background: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.depoimento img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.depoimento p {
+    font-style: italic;
+}
+
+.depoimento span {
+    font-weight: bold;
+}
+
+.inscricao .form-group {
+    margin-bottom: 1rem;
+    background-color: #000000;
+}
+
+.inscricao label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ff9900;
+}
+
+.inscricao input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #ff9900;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .sobre .content, .depoimentos .depoimento {
+        flex-direction: column;
+    }
+
+    .beneficio, .depoimentos .depoimento {
+        flex: 1 1 100%;
+    }
+}
+
+.o-que-vai-aprender ul {
+    list-style: none;
+    padding: 0;
+    color: #ffffff;
+}
+
+.o-que-vai-aprender ul li {
+    padding-left: 20px;
+    position: relative;
+}
+
+.o-que-vai-aprender ul li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #ff9900;
+}
+
+form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background: #000000;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none; /* Inicialmente oculto */
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Adicione estilos para a seção de vídeos */
+
+.videos {
+    background: #000000;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px solid #ffffff; /* Borda colorida */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.videos h2 {
+    margin-bottom: 1rem; /* Espaçamento inferior para o título */
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 vídeos por linha */
+    gap: 20px;
+}
+
+.video-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.78%; /* Proporção 16:9 para o vídeo */
+}
+
+.video-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para a seção "Para quem é a graduação" */
+.para-quem {
+    background-color: #000000;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.para-quem h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.para-quem .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.para-quem .tab-link {
+    background-color: #000000;
+    border: 2px solid #ff9900;
+    color: #ff9900;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.para-quem .tab-link.active {
+    background-color: #ff9900;
+    color: #ffffff;
+}
+
+.para-quem .tab-content {
+    display: none;
+    padding: 40px 0;
+}
+
+.para-quem .tab-content.active {
+    display: block;
+}
+
+.tab-content-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tab-content-inner h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tab-content-inner p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.tab-content-inner img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
